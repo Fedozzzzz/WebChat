@@ -1,5 +1,3 @@
-export default function() {
-  return (
-   <main>Remote app</main>
-  );
-}
+import {ExamplePage} from "@/pagesFSD";
+
+export default ExamplePage;

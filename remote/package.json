@@ -4,23 +4,41 @@
   "private": true,
   "scripts": {
     "dev-remote": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev -p 3001",
+    "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev -p 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@module-federation/nextjs-mf": "8.3.21",
-    "next": "14.2.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "webpack": "5.92.0"
+    "@module-federation/nextjs-mf": "8.6.1",
+    "@module-federation/typescript": "3.1.3",
+    "classnames": "^2.5.1",
+    "next": "14.2.14",
+    "react": "18.3.1",
+    "react-dom": "18",
+    "webpack": "5.95.0"
   },
   "devDependencies": {
+    "sass": "1.79.4",
+    "@eslint/js": "^9.11.1",
+    "@types/eslint__js": "^8.42.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@typescript-eslint/eslint-plugin": "^8.8.0",
+    "@typescript-eslint/parser": "^8.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "classnames": "2.5.1",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.2.4",
-    "typescript": "^5"
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.3.3",
+    "typescript": "^5.6.2"
   }
 }
